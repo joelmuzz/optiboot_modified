@@ -57,6 +57,10 @@
 
 #include <avr/boot.h>
 
+#ifdef AS7_BASED_BUILD
+  #include "../../AtmelStudio7/Configure.h"
+#endif //AS_BASED_BUILD
+
 #define __boot_page_fill_short(address, data)   \
 (__extension__({                                 \
     __asm__ __volatile__                         \

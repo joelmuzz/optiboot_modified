@@ -11,6 +11,30 @@
  * See optiboot.c for details.
  */
 
+#ifdef AS7_BASED_BUILD
+  #include "../../AtmelStudio7/Configure.h"
+#endif //AS_BASED_BUILD
+
+
+/*------------------------------------------------------------------------ */
+#if defined(__AVR_ATmega64A__)
+/*------------------------------------------------------------------------ */
+/* Ports for soft UART */
+#ifdef SOFT_UART
+#define UART_PORT   PORTE
+#define UART_PIN    PINE
+#define UART_DDR    DDRE
+#define UART_TX_BIT 1
+#define UART_RX_BIT 0
+#endif
+
+#define TIFR1 	TIFR
+#define WDTCSR	WDTCR
+#define MCUSR	MCUCSR
+
+#endif //#if defined(__AVR_ATmega64A__)
+
+
 /*------------------------------------------------------------------------ */
 #if defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega88) || defined(__AVR_ATmega8__) || defined(__AVR_ATmega88__)
 /*------------------------------------------------------------------------ */
