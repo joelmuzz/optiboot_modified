@@ -223,8 +223,8 @@
 /* 4.1 WestfW: put version number in binary.		  */
 /**********************************************************/
 
-#define OPTIBOOT_MAJVER 6
-#define OPTIBOOT_MINVER 2
+#define OPTIBOOT_MAJVER 7
+#define OPTIBOOT_MINVER 0
 
 /*
  * OPTIBOOT_CUSTOMVER should be defined (by the makefile) for custom edits
